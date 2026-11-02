@@ -1,0 +1,15 @@
+'use client';
+import Image from 'next/image';
+import {useState} from 'react';
+import {enquiry} from './content';
+type Product={name:string;category:string;image:string;detail:string;alt:string};
+export const products:Product[]=[
+{name:'The everyday tote',category:'Totes',image:'/images/boutique-editorial.webp',detail:'Roomy shapes and considered details for your daily style.',alt:'AI-generated illustrative oxblood tote with cream shoes'},
+{name:'A softer silhouette',category:'Shoulder bags',image:'photo-1584917865442-de89df76afd3',detail:'Explore shoulder bag styles that bring a look together.',alt:'Illustrative women’s handbag with a structured red silhouette'},
+{name:'The little occasion bag',category:'Occasion bags',image:'photo-1566150905458-1bf1fc113f0d',detail:'Small statement bags for moments worth dressing up for.',alt:'Illustrative compact handbag for occasion style'},
+{name:'An elegant heel',category:'Heels',image:'photo-1543163521-1bf539c55dd2',detail:'Discover heeled styles for your next dressed-up moment.',alt:'Illustrative pair of women’s heeled shoes'},
+{name:'A classic court shoe',category:'Court shoes',image:'photo-1535043934128-cf0b28d52f95',detail:'Ask us about classic court shoe styles and your preferred size.',alt:'Illustrative pair of neutral pointed-toe court shoes'},
+{name:'A beautiful step',category:'Sandals',image:'photo-1562273138-f46be4ebdf33',detail:'Explore sandal styles and ask about your preferred size.',alt:'Illustrative women’s sandal style'}];
+export default function Catalog({kind,preview=false}:{kind?:'Bags'|'Shoes';preview?:boolean}){const [filter,setFilter]=useState('All');const selected=kind==='Bags'?products.slice(0,3):kind==='Shoes'?products.slice(3):products;const categories=['All',...new Set(selected.map(p=>p.category))];return <><div className="catalog-bar"><p>DEMONSTRATION COLLECTION</p><div className="filters flex flex-wrap" role="group" aria-label={`Filter ${kind||'collection'}`}>{categories.map(x=><button key={x} aria-pressed={filter===x} className={filter===x?'active':''} onClick={()=>setFilter(x)}>{x}</button>)}</div></div><div className="products" aria-live="polite">{selected.filter(p=>filter==='All'||p.category===filter).slice(0,preview?3:6).map(p=><article key={p.name}><div className="product-image"><Image src={p.image.startsWith('/')?p.image:'https://images.unsplash.com/'+p.image+'?auto=format&fit=crop&w=900&q=80'} alt={p.alt} fill sizes="(max-width:650px) 90vw, 30vw"/><span>{p.image.startsWith('/')?'AI illustration · Demo style':'Illustrative photograph · Demo style'}</span></div><div className="product-label"><h3>{p.name}</h3><span>{p.category}</span></div><p>{p.detail}</p><a className="text-link inline-block" href={enquiry(p.name+' ('+p.category+', illustrative example)')}>Enquire about {kind==='Shoes'?'sizes & styles':'styles'} ↗</a></article>)}</div><p className="image-note">Demonstration styles and illustrative photographs, not confirmed inventory. Please enquire for actual designs, prices, stock{kind==='Shoes'?', sizes':''} and delivery details.</p></>}
+
+
