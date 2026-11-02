@@ -16,12 +16,17 @@ Use Node.js 20.9 or newer. Run `npm ci`, then `npm run dev`. Visit http://127.0.
 
 ## Owner details still required
 
-Actual product photographs, names, descriptions, categories, current stock, prices and shoe sizes; confirmed direct Facebook and TikTok profile URLs; pickup/visiting hours; delivery fees and estimates; applicable returns and exchanges terms.
+Actual product photographs, names, descriptions, categories, current stock, prices and shoe sizes; pickup/visiting hours; delivery fees and estimates; applicable returns and exchanges terms.
 
 The CEO quote supplied in the brief is a DRAFT requiring owner approval. Confirm the founder’s name and provide an approved portrait if desired. Until then an AM monogram and role attribution are used.
 
-Photographs are illustrative Unsplash examples and are not evidence of inventory or brand affiliation. Review and replace them before presenting specific products for sale. No prices, stock claims, testimonials or phone numbers are invented.
+Shoe photographs are illustrative Unsplash examples. Bag photographs were supplied by the boutique. Photographs do not assert stock availability or brand affiliation. Review and replace them before presenting specific products for sale. No prices, stock claims, testimonials or phone numbers are invented.
 
-Enquiry buttons open prefilled email drafts in the visitor’s email application. The visitor must send the message; no automatic email delivery or false success confirmation is used. No backend, API keys or contact-form setup is required. Social links are explicitly labelled platform searches.
+Enquiry buttons open prefilled email drafts in the visitor’s email application. The visitor must send the message; no automatic email delivery or false success confirmation is used. No backend, API keys or contact-form setup is required. Social links open the owner-confirmed Facebook and TikTok profiles.
 
 The unbranded hero image is AI-generated and labelled accordingly. See ASSET-NOTES.md for the final prompt, tool and asset path.
+
+The bags collection now uses 15 owner-supplied photographs, stored as optimised WebP images in public/images/bags. Descriptive display names identify each photograph; prices and current availability remain subject to confirmation. Shoes remain illustrative examples.
+
+Social links now use the owner-confirmed direct profiles: https://www.facebook.com/amarachi.osigwe.133487 and https://www.tiktok.com/@milito.collection.
+
