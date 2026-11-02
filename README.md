@@ -31,3 +31,5 @@ Confirm official product names, prices, current stock, sizes and colours; pickup
 
 ## Logo and review samples
 The custom vector logo uses an AM monogram inside a handbag silhouette. Reusable header/footer component: components/Brand.tsx. Standalone logo: public/images/amy-milito-logo.svg. Matching favicon: app/icon.svg. The reviews section contains clearly labelled illustrative writing samples, not genuine testimonials. Replace them with real, approved feedback in components/Reviews.tsx; no ratings or customer identities are invented.
+
+WhatsApp: the owner-supplied number is 08062519464 (international link 2348062519464). Bag enquiry buttons open WhatsApp with the bag name and category in a draft message; the visitor must send it. Contact sections and footer also include WhatsApp. Shoe enquiries continue to use email.

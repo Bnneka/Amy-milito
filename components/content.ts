@@ -5,3 +5,5 @@ export const socials=[{platform:'Facebook',name:'Amarachi Osigwe',url:'https://w
 // Draft CEO quote: requires owner approval before final launch.
 export const ceoQuote='My vision for AMY MILITO COLLECTION is to help every woman express her confidence through beautiful bags and quality shoes that complement her unique style.';
 
+export const whatsappNumber='08062519464';
+export function whatsappEnquiry(product?:string){const message=product?`Hello AMY MILITO COLLECTION, I would like to enquire about ${product}. Please confirm the current price, colours, availability and delivery details.`:'Hello AMY MILITO COLLECTION, I would like to enquire about your bags and shoes. Please help me with available styles, prices and delivery details.';return `https://wa.me/2348062519464?text=${encodeURIComponent(message)}`;}
