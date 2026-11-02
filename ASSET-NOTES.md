@@ -8,3 +8,5 @@ Use case: product-mockup. Create a photorealistic luxury boutique editorial stil
 Other product photographs use Unsplash image URLs in `components/Catalog.tsx`. They are labelled illustrative examples. No relationship with any pictured designer is asserted. Replace illustrative imagery with owner-supplied photographs and confirmed product information.
 
 Bags update: all 15 supplied bag photographs are included in public/images/bags/bag-01.webp through bag-15.webp, in attachment order. They were encoded as WebP without cropping or visual retouching. They replace the demonstration bag photos in the catalogue.
+
+Shoes update: all 14 supplied shoe photographs are included in public/images/shoes/shoe-01.webp through shoe-14.webp, in attachment order, without cropping or visual retouching. The owner-supplied CEO portrait is public/images/ceo-portrait.webp.

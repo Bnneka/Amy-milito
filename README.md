@@ -1,32 +1,33 @@
 # AMY MILITO COLLECTION
 
-Next.js App Router, TypeScript and Tailwind CSS boutique showcase. No cart or payment processing.
+Next.js App Router, TypeScript and Tailwind CSS boutique showcase with product enquiries.
 
 ## Run and build
+Use Node.js 20.9 or newer. Run `npm ci`, then `npm run dev` and open http://127.0.0.1:3000. Run `npm run build` for the static production export in `out/`. Deploy `out/` to static hosting. No cart, payments, accounts or backend is required.
 
-Use Node.js 20.9 or newer. Run `npm ci`, then `npm run dev`. Visit http://127.0.0.1:3000. Run `npm run build` for the production static export in `out/`. Deploy `out/` to static hosting; `next start` is not used for static exports.
-
-## Editing
-
-- `components/content.ts`: email, directions, social searches and founder quote.
-- `components/Catalog.tsx`: demonstration products, categories, descriptions and images. Replace with actual inventory and photographs; remove demo labels only for confirmed items.
-- `app/page.tsx`: home sections, services, FAQ and contact.
-- `app/globals.css`: boutique colours, typography and responsive layout.
+## Editing content
+- `components/Catalog.tsx`: 15 bag photographs and 14 shoe photographs, descriptive display names and category filters. Photographs are in `public/images/bags/` and `public/images/shoes/`, in attachment order.
+- `components/content.ts`: email, directions, social profile URLs and CEO quote.
+- `app/page.tsx`: home, About Us with CEO portrait and quote, services, FAQs and contact.
+- `public/images/ceo-portrait.webp`: owner-supplied CEO portrait beside the quote.
+- `app/globals.css`: boutique styling and responsive layouts.
 - Existing collection, services and contact routes remain supported.
 
-## Owner details still required
+All catalogue and portrait images are owner-supplied photographs encoded as WebP without cropping or visual retouching. Display names describe visible features; they do not assert materials, designer affiliation, prices or stock availability. Images retain their complete compositions in catalogue cards.
 
-Actual product photographs, names, descriptions, categories, current stock, prices and shoe sizes; pickup/visiting hours; delivery fees and estimates; applicable returns and exchanges terms.
+The hero is an AI-generated illustrative editorial and is labelled accordingly. See ASSET-NOTES.md for its prompt and asset details.
 
-The CEO quote supplied in the brief is a DRAFT requiring owner approval. Confirm the founder’s name and provide an approved portrait if desired. Until then an AM monogram and role attribution are used.
+## Enquiries and social profiles
+Enquiry links open an email draft for the visitor to review and send. There is no automatic delivery or false success confirmation. The email address is also visible for webmail users.
 
-Shoe photographs are illustrative Unsplash examples. Bag photographs were supplied by the boutique. Photographs do not assert stock availability or brand affiliation. Review and replace them before presenting specific products for sale. No prices, stock claims, testimonials or phone numbers are invented.
+Owner-confirmed profiles:
+- Facebook: https://www.facebook.com/amarachi.osigwe.133487
+- TikTok: https://www.tiktok.com/@milito.collection
 
-Enquiry buttons open prefilled email drafts in the visitor’s email application. The visitor must send the message; no automatic email delivery or false success confirmation is used. No backend, API keys or contact-form setup is required. Social links open the owner-confirmed Facebook and TikTok profiles.
+These profiles are linked in the home contact section, contact page and footer.
 
-The unbranded hero image is AI-generated and labelled accordingly. See ASSET-NOTES.md for the final prompt, tool and asset path.
+## Details still needed
+Confirm official product names, prices, current stock, sizes and colours; pickup/visiting hours; delivery fees and timing; returns and exchanges terms. The CEO portrait was supplied by the owner. The founder's confirmed name has not been supplied, so the role attribution remains. The supplied CEO quote remains a draft pending owner approval.
 
-The bags collection now uses 15 owner-supplied photographs, stored as optimised WebP images in public/images/bags. Descriptive display names identify each photograph; prices and current availability remain subject to confirmation. Shoes remain illustrative examples.
-
-Social links now use the owner-confirmed direct profiles: https://www.facebook.com/amarachi.osigwe.133487 and https://www.tiktok.com/@milito.collection.
-
+## Logo and review samples
+The custom vector logo uses an AM monogram inside a handbag silhouette. Reusable header/footer component: components/Brand.tsx. Standalone logo: public/images/amy-milito-logo.svg. Matching favicon: app/icon.svg. The reviews section contains clearly labelled illustrative writing samples, not genuine testimonials. Replace them with real, approved feedback in components/Reviews.tsx; no ratings or customer identities are invented.
