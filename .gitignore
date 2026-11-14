@@ -5,3 +5,6 @@ out/
 .openai/*.log
 
 *.tsbuildinfo
+
+.env*
+!.env.example

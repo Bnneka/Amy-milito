@@ -3,7 +3,7 @@
 Next.js App Router, TypeScript and Tailwind CSS boutique showcase with product enquiries.
 
 ## Run and build
-Use Node.js 20.9 or newer. Run `npm ci`, then `npm run dev` and open http://127.0.0.1:3000. Run `npm run build` for the static production export in `out/`. Deploy `out/` to static hosting. No cart, payments, accounts or backend is required.
+Use Node.js 20.9 or newer. Run `npm ci`, then `npm run dev` and open http://127.0.0.1:3000. Run `npm run build` then `npm start` to serve the production app. The Gemini chat endpoint needs a Next.js server. The existing static Sites deployment cannot run this endpoint.
 
 ## Editing content
 - `components/Catalog.tsx`: 15 bag photographs and 14 shoe photographs, descriptive display names and category filters. Photographs are in `public/images/bags/` and `public/images/shoes/`, in attachment order.
@@ -33,3 +33,11 @@ Confirm official product names, prices, current stock, sizes and colours; pickup
 The custom vector logo uses an AM monogram inside a handbag silhouette. Reusable header/footer component: components/Brand.tsx. Standalone logo: public/images/amy-milito-logo.svg. Matching favicon: app/icon.svg. The reviews section contains clearly labelled illustrative writing samples, not genuine testimonials. Replace them with real, approved feedback in components/Reviews.tsx; no ratings or customer identities are invented.
 
 WhatsApp: the owner-supplied number is 08062519464 (international link 2348062519464). Bag enquiry buttons open WhatsApp with the bag name and category in a draft message; the visitor must send it. Contact sections and footer also include WhatsApp. Shoe enquiries continue to use email.
+
+## Boutique assistant
+
+Copy `.env.example` to `.env.local`, set `GEMINI_API_KEY` to your Google AI Studio key, then restart Next.js. Set `GEMINI_MODEL` if you use a different Gemini model. For deployment, set those variables in your Next.js host's server environment. Keep the key in the server environment and out of browser code, Git and chat.
+
+Gemini receives the public product descriptions, FAQs, contact and delivery details, plus up to five recent visitor questions and four assistant replies. The catalogue and FAQ use the same data as the website. Prices, stock, sizes, delivery estimates and returns are confirmed by the boutique. FAQ shortcuts and the WhatsApp link are available without a configured key.
+
+The endpoint uses a process-wide ceiling of 20 Gemini requests per minute. Multi-instance production hosting should use a shared rate limiter or host-level quota for a site-wide ceiling.

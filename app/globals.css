@@ -54,3 +54,97 @@ html{scroll-behavior:smooth;scroll-padding-top:115px}body{padding-top:99px;font-
     height: 60px;
   }
 }
+
+.boutique-chat {
+  position: fixed;
+  right: max(12px, min(3vw, 24px));
+  bottom: max(12px, env(safe-area-inset-bottom));
+  z-index: 45;
+  display: grid;
+  justify-items: end;
+  gap: 8px;
+}
+.boutique-chat-panel {
+  width: min(380px, calc(100vw - 24px));
+  max-height: min(680px, calc(100dvh - 76px));
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  background: var(--cream);
+  border: 1px solid #d6c8bd;
+  border-radius: 16px;
+  box-shadow: 0 12px 38px #351d2433;
+}
+.boutique-chat-heading, .boutique-chat-form, .boutique-chat-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px 16px;
+}
+.boutique-chat-heading, .boutique-chat-launch, .boutique-chat-form button {
+  background: var(--wine);
+  color: white;
+}
+.boutique-chat-heading h2 { font-size: 21px; margin: 0; }
+.boutique-chat-heading button { font-size: 23px; padding: 0 8px; }
+.boutique-chat-transcript { min-height: 65px; max-height: 280px; overflow: auto; padding: 12px 16px; }
+.boutique-chat-transcript p { white-space: pre-wrap; overflow-wrap: anywhere; margin: 0 0 10px; }
+.boutique-chat-transcript strong { display: block; font-size: 11px; }
+.boutique-chat-user { background: #efe1dc; padding: 8px 10px; border-radius: 8px; }
+.boutique-chat-quick { display: flex; flex-wrap: wrap; gap: 6px; padding: 0 16px; }
+.boutique-chat-quick button {
+  border: 1px solid var(--wine);
+  color: var(--wine);
+  border-radius: 999px;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+.boutique-chat-launch, .boutique-chat-form button { border-radius: 999px; padding: 9px 14px; }
+.boutique-chat-form button:disabled { opacity: .6; cursor: default; }
+.boutique-chat input {
+  min-width: 0;
+  flex: 1;
+  background: white;
+  border: 1px solid #a49388;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 16px;
+}
+.boutique-chat button { cursor: pointer; }
+.boutique-chat :focus-visible { outline: 2px solid #a47520; outline-offset: 2px; }
+.boutique-chat-error { color: var(--wine); margin: 8px 16px 0; font-size: 13px; }
+.boutique-chat-footer { padding-top: 0; font-size: 12px; }
+.boutique-chat-footer a { color: var(--wine); text-decoration: underline; }
+
+.site-header #main-menu {
+  gap: 8px;
+}
+
+.site-header #main-menu a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background-color: var(--wine);
+  color: #fff;
+  white-space: nowrap;
+}
+
+.site-header #main-menu a:hover {
+  background-color: #742940;
+}
+
+@media (max-width: 760px) {
+  .site-header #main-menu a {
+    min-height: 44px;
+  }
+}
+
+.footer-brand img {
+  display: block;
+  width: min(160px, 100%);
+  height: auto;
+  margin-bottom: 10px;
+}

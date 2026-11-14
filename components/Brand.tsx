@@ -1,2 +1,12 @@
+import Image from 'next/image';
 import Link from 'next/link';
-export default function Brand(){return <Link href="/" className="brand brand-lockup" aria-label="AMY MILITO COLLECTION home"><svg className="brand-symbol" width="45" height="50" viewBox="0 0 80 90" fill="none" aria-hidden="true"><path d="M19 32V24C19 12 28 5 40 5C52 5 61 12 61 24V32" stroke="currentColor" strokeWidth="2"/><path d="M13 29H67L73 79H7L13 29Z" stroke="currentColor" strokeWidth="2"/><path d="M17 68L29 39L40 68M22 57H36M40 68V39L51 57L62 39V68" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"/><path d="M32 85H48" stroke="#b79555" strokeWidth="2"/></svg><div>AMY MILITO<span>COLLECTION</span></div></Link>}
+import officialLogo from '../public/images/official-logo.png';
+
+export default function Brand() {
+  return (
+    <Link href="/" className="brand brand-lockup footer-brand" aria-label="AMY MILITO COLLECTION home">
+      <Image src={officialLogo} alt="" sizes="160px" />
+      <div>AMY MILITO<span>COLLECTION</span></div>
+    </Link>
+  );
+}
